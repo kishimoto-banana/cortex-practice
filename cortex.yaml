@@ -11,15 +11,9 @@
     cpu: 0.2
     mem: 100M
 
-- name: another-iris-classifier
+- name: multi-model-text-analyzer
   predictor:
     type: python
-    path: another-predictor.py
-    config:
-      bucket: cortex-examples-ks
-      key: sklearn/iris-classifier/another-model.pkl
+    path: predictor-pytorch.py
   monitoring:
     model_type: classification
-  compute:
-    cpu: 0.2
-    mem: 100M
